@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89ae9fac-4cc7-4590-966f-0becc356fe76" name="Default Changelist" comment="" />
+    <list default="true" id="89ae9fac-4cc7-4590-966f-0becc356fe76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/tarla-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/tarla-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Fertilizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Fertilizer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Image.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Image.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Plantation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Plantation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/ProductType.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/ProductType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Seed.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Seed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Supplier.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Supplier.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/Work.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Work.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -106,11 +125,28 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
     </include_path>
   </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectId" id="1SiDTIxKxPjWCaPVsvqPNwp3eUc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
@@ -147,10 +183,22 @@
       <option name="presentableId" value="Default" />
       <updated>1572037529453</updated>
       <workItem from="1572037533269" duration="616000" />
+      <workItem from="1572120484496" duration="2636000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
