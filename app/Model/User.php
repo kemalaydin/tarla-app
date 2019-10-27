@@ -22,8 +22,10 @@ class User extends Authenticatable
         return $this->hasMany('App\Model\Work','user_id','id');
     }
 
-    public function image(){
-        return $this->morphOne('App\Model\Image', 'imageable');
+    public function avatar(){
+        return $this->morphOne('App\Model\Image', 'imageable')->withDefault([
+            'path' => 'images/users/no-image.png',
+        ]);
     }
 
 }

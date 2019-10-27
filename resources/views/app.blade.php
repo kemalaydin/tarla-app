@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>@yield('title')</title>
+    <title>Tarla App | Hoş Geldiniz</title>
     <meta name="description" content="A high-quality &amp; free Bootstrap admin dashboard template pack that comes with lots of templates and components.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -24,7 +24,7 @@
                 <nav class="navbar align-items-stretch navbar-light bg-white flex-md-nowrap border-bottom p-0">
                     <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
                         <div class="d-table m-auto">
-                            <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/logo.png" alt="Shards Dashboard">
+                            <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="{{ URL('images/logo.png') }}">
                             <span class="d-none d-md-inline ml-1">Tarla APP</span>
                         </div>
                     </a>
@@ -82,7 +82,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-nowrap px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                                <img class="user-avatar rounded-circle mr-2" src="images/avatars/0.jpg" alt="User Avatar">
+                                <img class="user-avatar rounded-circle mr-2" src="{{URL(Auth::user()->avatar->path)}}" alt="User Avatar">
                                 <span class="d-none d-md-inline-block">{{ Auth::user()->name.' '.Auth::user()->surname }}</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-small">
@@ -105,9 +105,10 @@
             <div class="main-content-container container-fluid px-4">
                 <!-- Page Header -->
                 <div class="page-header row no-gutters py-4">
-                    <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                        <span class="text-uppercase page-subtitle">@yield('title')</span>
-                        <h3 class="page-title">@yield('description')</h3>
+                    <div class="col-12 col-sm-12 text-center text-sm-left mb-0">
+
+                        <h3 class="page-title">@yield('title')</h3>
+                        <span class="text-uppercase page-subtitle">@yield('description')</span>
                     </div>
                 </div>
                 <!-- End Page Header -->
