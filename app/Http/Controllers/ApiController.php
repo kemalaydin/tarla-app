@@ -14,14 +14,12 @@ class ApiController extends Controller
 
         if($User){
             return response()->JSON([
-                'status' => 200,
                 'token' => $User->api_token,
-            ]);
+            ],200);
         }else{
             return response()->JSON([
-                'status' => 500,
                 'message' => 'Kullanıcı Bulunamadı'
-            ]);
+            ],404);
         }
     }
 }
