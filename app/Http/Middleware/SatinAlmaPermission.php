@@ -18,7 +18,9 @@ class SatinAlmaPermission
     {
         if (Auth::check()) {
             if(Auth::user()->permission != "satin_alma") {
-                return abort(403);
+                return response()->json([
+                    'message' => 'Departmanınız bu işlemi yapmak için uygun değil'
+                ],401);
             }
         }else{
             return redirect()->route('login');
