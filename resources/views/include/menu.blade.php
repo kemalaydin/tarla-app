@@ -36,9 +36,9 @@
                 <span>Tarlalar</span>
             </a>
             <div class="dropdown-menu dropdown-menu-small">
-                <a class="dropdown-item " href="{{route('user.index')}}">Tarlalar</a>
+                <a class="dropdown-item " href="{{route('plant.index')}}">Tarlalar</a>
                 @if(Auth::user()->permission == "satin_alma" || Auth::user()->permission == "admin" )
-                    <a class="dropdown-item " href="{{route('user.create')}}">Yeni Tarla Ekle</a>
+                    <a class="dropdown-item " href="{{route('plant.create')}}">Yeni Tarla Ekle</a>
                 @endif
 
             </div>
