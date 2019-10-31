@@ -44,7 +44,21 @@
             </div>
         </li>
 
-        @if(Auth::user()->permission != "ciftci" || Auth::user()->permission != "kalite_kontrol" )
+        @if(Auth::user()->permission == "admin" || Auth::user()->permission == "satin_alma" )
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
+                    <i class="icofont-delivery-time" style="font-size: 19px;"></i>
+                    <span>Tedarikçiler</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-small">
+                    <a class="dropdown-item " href="{{route('supplier.index')}}">Tedarikçiler</a>
+                    <a class="dropdown-item " href="{{route('supplier.create')}}">Yeni Tedarikçi Ekle</a>
+                </div>
+            </li>
+        @endif
+
+
+    @if(Auth::user()->permission != "ciftci" || Auth::user()->permission != "kalite_kontrol" )
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
                     <i class="icofont-wheat" style="font-size: 19px;"></i>
@@ -100,31 +114,7 @@
         @endif
 
 
-        @if(Auth::user()->permission == "admin" || Auth::user()->permission == "satin_alma" )
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
-                    <i class="icofont-delivery-time" style="font-size: 19px;"></i>
-                    <span>Tedarikçiler</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-small">
-                    <a class="dropdown-item " href="{{route('user.index')}}">Tedarikçiler</a>
-                    <a class="dropdown-item " href="{{route('user.create')}}">Yeni Tedarikçi Ekle</a>
-                </div>
-            </li>
-        @endif
 
-        @if(Auth::user()->permission == "admin" || Auth::user()->permission == "planlama" )
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
-                    <i class="icofont-vehicle-delivery-van" style="font-size: 19px;"></i>
-                    <span>Taşıyıcılar</span>
-                </a>
-                <div class="dropdown-menu dropdown-menu-small">
-                    <a class="dropdown-item " href="{{route('user.index')}}">Taşıyıcılar</a>
-                    <a class="dropdown-item " href="{{route('user.create')}}">Yeni Taşıyıcı Ekle</a>
-                </div>
-            </li>
-        @endif
 
         @if(Auth::user()->permission == "admin" || Auth::user()->permission == "planlama" )
             <li class="nav-item dropdown">

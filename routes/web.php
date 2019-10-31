@@ -14,6 +14,7 @@
 Route::get('/','HomeController@index')->name('index');
 Route::resource('user', 'UserController')->middleware('isAdmin');
 Route::resource('plant','PlantController')->middleware('auth');
+Route::resource('supplier','SupplierController')->middleware('auth');
 
 Route::get('login','Auth\LoginController@loginPage')->name('login');
 Route::post('login','Auth\LoginController@login')->name('login.post');

@@ -28,13 +28,9 @@
                     <div class="d-flex flex-column m-auto">
                         <div class="stats-small__data text-center">
                             <span class="stats-small__label text-uppercase">Personel</span>
-                            <h6 class="stats-small__value count my-3">182</h6>
-                        </div>
-                        <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                            <h6 class="stats-small__value count my-3">{{ App\Model\User::count() }}</h6>
                         </div>
                     </div>
-                    <canvas height="140" class="blog-overview-stats-small-2 chartjs-render-monitor" style="display: block; height: 70px; width: 177px;" width="354"></canvas>
                 </div>
             </div>
         </div>
@@ -60,13 +56,9 @@
                     <div class="d-flex flex-column m-auto">
                         <div class="stats-small__data text-center">
                             <span class="stats-small__label text-uppercase">Tarla</span>
-                            <h6 class="stats-small__value count my-3">2,413</h6>
-                        </div>
-                        <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                            <h6 class="stats-small__value count my-3">{{ App\Model\Plantation::count() }}</h6>
                         </div>
                     </div>
-                    <canvas height="140" class="blog-overview-stats-small-4 chartjs-render-monitor" style="display: block; height: 70px; width: 177px;" width="354"></canvas>
                 </div>
             </div>
         </div>
