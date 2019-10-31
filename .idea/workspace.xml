@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89ae9fac-4cc7-4590-966f-0becc356fe76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/plant/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/plant/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/plant/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Plantation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Plantation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/include/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/include/menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +182,7 @@
       <workItem from="1572037533269" duration="616000" />
       <workItem from="1572120484496" duration="15570000" />
       <workItem from="1572460686948" duration="1391000" />
-      <workItem from="1572508914299" duration="1253000" />
+      <workItem from="1572508914299" duration="1405000" />
     </task>
     <servers />
   </component>
