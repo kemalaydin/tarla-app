@@ -18,7 +18,6 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->enum('permission', ['admin', 'ciftci','tasiyici','satin_alma','planlama','kalite_kontrol'])->comment('[0] : Admin, [1] : Çiftçi, [2] : Taşıyıcı, [3] : Satın Alma, [4] : Planlama, [5] : Kalite Kontrol');
-            $table->string('api_token', 60)->unique()->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
