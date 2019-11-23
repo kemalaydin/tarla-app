@@ -83,12 +83,12 @@
                     <span>Gübreler</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-small">
-                    <a class="dropdown-item " href="{{route('user.index')}}">Alınan Gübreler</a>
+                    <a class="dropdown-item " href="{{route('fertilizer.index')}}">Alınan Gübreler</a>
                     @if(Auth::user()->permission == "satin_alma" || Auth::user()->permission == "admin" )
-                        <a class="dropdown-item " href="{{route('user.index')}}">Alınması Beklenen Gübreler</a>
+                        <a class="dropdown-item " href="{{route('fertilizer.index')}}">Alınması Beklenen Gübreler</a>
                     @endif
                     @if(Auth::user()->permission == "satin_alma" || Auth::user()->permission == "admin" || Auth::user()->permission == "planlama" )
-                        <a class="dropdown-item " href="{{route('user.create')}}">Yeni Gübre Ekle</a>
+                        <a class="dropdown-item " href="{{route('fertilizer.create')}}">Yeni Gübre Ekle</a>
                     @endif
                 </div>
             </li>
