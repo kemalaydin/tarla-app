@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Seed extends Model
 {
+
+    protected $fillable = ['product_type','supplier_id','supply_status'];
+
     public function supplier(){
         return $this->hasOne('App\Model\Supplier','id','supplier_id');
     }

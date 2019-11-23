@@ -17,6 +17,7 @@ class CreateSeedsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('product_type');
             $table->integer('supplier_id');
+            $table->integer('supply_status');
             $table->integer('stock');
             $table->timestamps();
         });
