@@ -135,7 +135,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/supplier" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -185,7 +185,11 @@
       <workItem from="1572120484496" duration="15570000" />
       <workItem from="1572460686948" duration="1391000" />
       <workItem from="1572508914299" duration="2845000" />
+<<<<<<< Updated upstream
       <workItem from="1574509972479" duration="798000" />
+=======
+      <workItem from="1574517086296" duration="110000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
