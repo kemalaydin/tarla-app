@@ -15,10 +15,6 @@ class PlantController extends Controller
      */
     public function index()
     {
-        $username = "kemal";
-=======
-        $user = "kemal";
->>>>>>> Stashed changes
         $Plants = Plantation::get();
         return view('plant.index',compact('Plants'));
     }
