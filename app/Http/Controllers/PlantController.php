@@ -15,6 +15,7 @@ class PlantController extends Controller
      */
     public function index()
     {
+        $username = "kemal";
         $Plants = Plantation::get();
         return view('plant.index',compact('Plants'));
     }
