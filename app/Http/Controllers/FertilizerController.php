@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Model\Fertilizer;
+use App\Model\ProductType;
+use App\Model\Seed;
+use App\Model\Supplier;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class FertilizerController extends Controller
 {
@@ -25,7 +29,9 @@ class FertilizerController extends Controller
      */
     public function create()
     {
-        return view('fertilizer.create');
+
+        $Suppliers = Supplier::get();
+        return view('fertilizer.create',compact('Suppliers'));
     }
 
     /**
@@ -36,6 +42,14 @@ class FertilizerController extends Controller
      */
     public function store(Request $request)
     {
+        $NewFertilizer = Fertilizer::create($request->except('_token'));
+        if($NewFertilizer){
+            Alert::toast('Gübre başarıyla eklendi','success');
+            return redirect()->route('fertilizer.index');
+        }else {
+            Alert::toast('Bir hata meydana geldi', 'danger');
+            return redirect()->back();
+        }
 
     }
 
@@ -58,7 +72,9 @@ class FertilizerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $Suppliers = Supplier::get();
+        $Fertilizer = Fertilizer::findOrFail($id);
+        return view('Fertilizer.edit',compact('Fertilizer','Suppliers'));
     }
 
     /**
@@ -70,9 +86,15 @@ class FertilizerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Fertilizer = Fertilizer::findOrFail($id)->update($request->except('_method', '_token'));
+        if ($Fertilizer) {
+            Alert::toast('Gübre başarıyla güncellendi', 'success');
+            return redirect()->route('fertilizer.index');
+        } else {
+            Alert::toast('bir hata meydana geldi', 'danger');
+            return redirect()->back();
+        }
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -81,6 +103,7 @@ class FertilizerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Fertilizer = Fertilizer::findOrFail($id)->delete();
+        return redirect()->back();
     }
 }

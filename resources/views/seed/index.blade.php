@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sistemdeki tohumlar
+    SİSTEMDEKİ TOHUMLAR
 @stop
 
 @section('content')

@@ -6,7 +6,7 @@
 @stop
 
 @section('description')
-    Sistemdeki gübreler
+    SİSTEMDEKİ GÜBRELER
 @stop
 
 @section('content')

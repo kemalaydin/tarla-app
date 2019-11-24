@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sisteme yeni bir tohum ekleyin
+    SİSTEME YENİ BİR TOHUM EKLEYİN
 @stop
 
 @section('content')
@@ -55,9 +55,6 @@
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
                                     <input class="form-control" name="stock" placeholder="Alınacak Adet" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Kaydet" class="float-right btn btn-success" />
                                 </div>
                             </div>
                             @endif
