@@ -32,7 +32,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $ProductCode = strtolower("ta".Carbon::now()->format('d').Carbon::now()->format('m').Carbon::now()->format('Y').Str::random(5));
+        $ProductCode = strtoupper("ta".Carbon::now()->format('d').Carbon::now()->format('m').Carbon::now()->format('Y').Str::random(5));
         $ProductTypes = ProductType::get();
         $Plants = Plantation::get();
         $Fertilizers = Fertilizer::get();
