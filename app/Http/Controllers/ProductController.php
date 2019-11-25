@@ -7,6 +7,7 @@ use App\Model\Plantation;
 use App\Model\Product;
 use App\Model\ProductType;
 use App\Model\Seed;
+use App\Model\Supplier;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -77,7 +78,13 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ProductTypes = ProductType::get();
+        $Plants = Plantation::get();
+        $Fertilizers = Fertilizer::get();
+        $Seeds = Seed::get();
+        $Product = Product::findorfail($id);
+        return view('product.edit',compact('Plants','Fertilizers','Seeds','ProductTypes','Product'));
+
     }
 
     /**
@@ -89,9 +96,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $Product = Product::findOrFail($id)->update($request->except('_method', '_token'));
+        if ($Product) {
+            Alert::toast('Ekilen Ürün Başarıyla Güncellendi', 'success');
+            return redirect()->route('product.index');
+        } else {
+            Alert::toast('Bir Hata Meydana Geldi', 'danger');
+            return redirect()->back();
+        }
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -100,6 +113,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $Product = Product::findOrFail($id)->delete();
+        Alert::toast('Başarıyla Silindi','warning');
+        return redirect()->back();
     }
 }

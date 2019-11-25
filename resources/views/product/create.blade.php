@@ -57,7 +57,7 @@
                                     <select class="form-control" name="fertilizer_id" required>
                                         <option disabled selected>Gübre Seçiniz...</option>
                                         @foreach($Fertilizers as $Fertilizer)
-                                            <option value="{{ $Fertilizer->id }}">{{$Fertilizer->fertilizer_name}} ( Stok Durumu : @if($Fertilizer->supply_status == 0) Yok @else Var @endif ) - {{ $Fertilizer->supplier->merchant_name }}</option>
+                                            <option value="{{ $Fertilizer->id }}">{{$Fertilizer->fertilizer_name}} ( Stok Durumu : @if($Fertilizer->supply_status == 0) Yok @else (Var) @endif - {{ $Fertilizer->supplier->merchant_name }}</option>
                                         @endforeach
                                     </select>
                                 </div>

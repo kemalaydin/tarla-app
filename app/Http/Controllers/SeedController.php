@@ -104,6 +104,8 @@ class SeedController extends Controller
     public function destroy($id)
     {
         $Seed = Seed::findOrFail($id)->delete();
+        Alert::toast('Başarıyla Silindi','warning');
         return redirect()->back();
+
     }
 }
