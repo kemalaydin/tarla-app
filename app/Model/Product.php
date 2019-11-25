@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    protected $fillable = ["product_type","product_code","plantation_id","planting_date","crop_collecting_date","seed_id","fertilizer_id"];
+
     public function plantation(){
         return $this->hasOne('App\Model\Plantation','id','plantation_id');
     }

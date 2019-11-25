@@ -102,12 +102,12 @@
                     <span>Ürünler</span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-small">
-                    <a class="dropdown-item " href="{{route('user.index')}}">Ekilen Ürünler</a>
+                    <a class="dropdown-item " href="{{route('product.index')}}">Ekilen Ürünler</a>
                     @if(Auth::user()->permission == "planlama" || Auth::user()->permission == "admin" )
-                        <a class="dropdown-item " href="{{route('user.index')}}">Yeni Ürün Ekimi</a>
+                        <a class="dropdown-item " href="{{route('product.index')}}">Yeni Ürün Ekimi</a>
                     @endif
                     @if(Auth::user()->permission == "kalite_kontrol" || Auth::user()->permission == "admin" )
-                        <a class="dropdown-item " href="{{route('user.create')}}">Ürün Kontrol</a>
+                        <a class="dropdown-item " href="{{route('product.create')}}">Ürün Kontrol</a>
                     @endif
                 </div>
             </li>

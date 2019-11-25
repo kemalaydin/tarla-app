@@ -24,6 +24,7 @@
                         <thead class="bg-light">
                         <tr>
                             <th scope="col" class="border-0" style="width: 10px">#</th>
+                            <th scope="col" class="border-0">Tohum İsmi</th>
                             <th scope="col" class="border-0">Ürün İsmi</th>
                             <th scope="col" class="border-0 text-center">Tedarikçi</th>
                             <th scope="col" class="border-0 text-center">Tarih</th>
@@ -36,6 +37,9 @@
                         @foreach($Seeds as $Sort => $Seed)
                             <tr>
                                 <td>{{ $Sort + 1 }}</td>
+                                <td>
+                                    {{ $Seed->seed_name }}
+                                </td>
                                 <td>
                                     {{ $Seed->productType->product_name }}
                                 </td>

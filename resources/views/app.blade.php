@@ -12,6 +12,11 @@
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="{{ URL('styles/shards-dashboards.1.1.0.min.css') }}">
     <link rel="stylesheet" href="{{ URL('styles/extras.1.1.0.min.css') }}">
     <link rel="stylesheet" href="{{ URL('styles/icofont/icofont.min.css')}}">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 <body class="h-100">
 <div class="container-fluid">

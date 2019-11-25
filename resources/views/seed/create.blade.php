@@ -48,16 +48,24 @@
                                         <option value="1">Tedarik Edildi</option>
 
                                     </select>                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Kaydet" class="float-right btn btn-success" />
-                                </div>
+
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
                                     <input class="form-control" name="stock" placeholder="Alınacak Adet" />
                                 </div>
                             </div>
+                            <div class="col-sm-12 col-md-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="seed_name" placeholder="Tohum İsmi" />
+                                </div>
+                            </div>
+
                             @endif
+
+                        </div>
+                        <div class="form-group mb-5">
+                            <input type="submit" value="Kaydet" class="float-right btn btn-success" />
                         </div>
                     </li>
                     </form>
