@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sistemde işlem yapılabilen tarlalar.
+    SİSTEMDE İŞLEM YAPILABİLEN TARLALAR
 @stop
 
 @section('content')

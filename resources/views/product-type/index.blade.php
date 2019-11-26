@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sistemdeki ürün tipleri
+    SİSTEMDEKİ ÜRÜN TİPLERİ
 @stop
 
 @section('content')

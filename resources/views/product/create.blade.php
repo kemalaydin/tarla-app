@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sisteme yeni bir ürün ekleyin
+    SİSTEME YENİ BİR ÜRÜN EKİN
 @stop
 
 @section('content')

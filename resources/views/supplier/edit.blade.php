@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sisteme kayıtlı bir tedarikçi düzenleyin
+    SİSTEME KAYITLI BİR TEDARİKÇİ DÜZENLEYİN
 @stop
 
 @section('content')

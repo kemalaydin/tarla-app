@@ -46,10 +46,10 @@ class LoginController extends Controller
 
     public function login(Request $request){
         if (Auth::attempt(['email' => $request->get('email'), 'password' => $request->get('password')])) {
-            Alert::success('Başarılı !','Giriş İşleniniz Başarıyla Gerçekleştirildi.');
+            Alert::success('Başarılı !','Giriş İşleminiz Başarıyla Gerçekleştirildi.');
             return redirect('/');
         }else{
-            Alert::toast('Eposta adresinizi veya Şifrenizi yanlış girdiniz. Lütfen bilgilerinizi kontrol ederek tekrar deneyiniz','warning');
+            Alert::toast('Eposta adresinizi veya Şifrenizi yanlış girdiniz. Lütfen bilgilerinizi kontrol ederek tekrar deneyiniz.','warning');
             return redirect()->back()->withInput();
         }
     }

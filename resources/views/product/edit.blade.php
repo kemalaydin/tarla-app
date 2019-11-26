@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    SİSTEMDEKİ EKİLEN ÜRÜNÜ DÜZENLE
+    SİSTEMDEKİ EKİLEN ÜRÜNÜ DÜZENLEYİN
 @stop
 
 @section('content')
@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-group mt-4">
-                                        <input type="submit" value="Kaydet" class="float-right btn btn-success" />
+                                        <input type="submit" value="Düzenle" class="float-right btn btn-success" />
                                     </div>
                                 </div>
                             </div>

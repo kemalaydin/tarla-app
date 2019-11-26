@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sisteme eklenen ürünler.
+   SİSTEME EKLENEN ÜRÜNLER
 @stop
 
 @section('content')

@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sistemdeki tarlanızı düzenleyin
+    SİSTEMDEKİ TARLAYI DÜZENLEYİN
 @stop
 
 @section('content')
