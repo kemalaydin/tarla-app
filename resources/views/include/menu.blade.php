@@ -12,8 +12,8 @@
                 <span>İşler</span>
             </a>
             <div class="dropdown-menu dropdown-menu-small">
-                <a class="dropdown-item " href="{{route('user.index')}}">Yeni İş Ekle</a>
-                <a class="dropdown-item " href="{{route('user.create')}}">Yaptığım İşler</a>
+                <a class="dropdown-item " href="{{route('work.index')}}">Yeni İş Ekle</a>
+                <a class="dropdown-item " href="{{route('work.my_works')}}">Yaptığım İşler</a>
             </div>
         </li>
 

@@ -46,9 +46,6 @@
 
                                             {{ csrf_field() }}
                                             {{ method_field('delete') }}
-                                            <a href="{{ route('user.show',$User->id) }}" class="btn btn-white">
-                                                İncele
-                                            </a>
                                             <a href="{{ route('user.edit',$User->id) }}" class="btn btn-outline-primary">
                                                 Düzenle
                                             </a>

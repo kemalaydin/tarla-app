@@ -8,8 +8,10 @@ use App\Model\Product;
 use App\Model\ProductType;
 use App\Model\Seed;
 use App\Model\Supplier;
+use App\Model\Work;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -50,7 +52,15 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $Product = Product::create($request->except('_token'));
+
         if($Product){
+            $NewWork = new Work();
+            $NewWork->product_id = $Product->id;
+            $NewWork->user_id = Auth::id();
+            $NewWork->work_type = 3;
+            $NewWork->details = "Ürün planlaması yapıldı.";
+            $NewWork->save();
+
             Alert::toast('Ürün Başarıyla Ekildi','success');
             return redirect()->route('product.index');
         }else{
