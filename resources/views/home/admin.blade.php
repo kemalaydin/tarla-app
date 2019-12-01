@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('description')
-    Hoş Geldiniz
+    HOŞ GELDİNİZ
 @stop
 
 @section('content')

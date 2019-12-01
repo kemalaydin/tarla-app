@@ -95,7 +95,7 @@
                                     <i class="material-icons">&#xE7FD;</i> Hesabım</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item text-danger" href="{{ route('user.logout') }}">
-                                    <i class="material-icons text-danger">&#xE879;</i> Logout </a>
+                                    <i class="material-icons text-danger">&#xE879;</i> Çıkış Yap </a>
                             </div>
                         </li>
                     </ul>

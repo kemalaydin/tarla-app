@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    SİSTEMDEKİ TOHUMU DÜZENLE
+    SİSTEMDEKİ TOHUMU DÜZENLEYİN
 @stop
 
 @section('content')
@@ -60,7 +60,7 @@
                                         <input class="form-control" name="seed_name" value="{{ $Seed->seed_name }}" placeholder="Tohum İsmi" />
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" value="Kaydet" class="float-right btn btn-success" />
+                                        <input type="submit" value="Düzenle" class="float-right btn btn-success" />
                                     </div>
                                 </div>
                             @endif

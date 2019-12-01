@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Hammadde tedarik ettiğiniz kurum veya kişiler.
+    HAMMADDE TEDARİK ETTİĞİNİZ KURUM VEYA KİŞİLER
 @stop
 
 @section('content')

@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Ürün Tipini Güncelleyin
+    ÜRÜN TİPİNİ DÜZENLEYİN
 @stop
 
 @section('content')

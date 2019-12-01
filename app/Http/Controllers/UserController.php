@@ -109,7 +109,7 @@ class UserController extends Controller
         }
         $User->save();
         Alert::toast('Kullanıcı Başarıyla Güncellendi','info');
-        return redirect()->route('user.edit',$User->id);
+        return redirect()->route('user.index',$User->id);
     }
 
     /**

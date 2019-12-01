@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sisteme yeni bir tarla ekleyin
+    SİSTEME YENİ BİR TARLA EKLEYİN
 @stop
 
 @section('content')

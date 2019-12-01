@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sistemdeki çalışanı düzenleyin
+    SİSTEMDEKİ ÇALIŞANI DÜZENLEYİN
 @stop
 
 @section('content')

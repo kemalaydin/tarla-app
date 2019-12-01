@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sisteme yeni bir tedarikçi ekleyin
+    SİSTEME YENİ BİR TEDARİKÇİ EKLEYİN
 @stop
 
 @section('content')

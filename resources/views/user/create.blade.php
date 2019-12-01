@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sisteme yeni bir çalışan ekleyin
+    SİSTEME YENİ BİR ÇALIŞAN EKLEYİN
 @stop
 
 @section('content')
