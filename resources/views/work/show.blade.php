@@ -48,7 +48,7 @@
                             <div class="col-sm-12 col-md-12">
                                 <div class="form-group">
                                     Açıklama
-                                    <textarea class="form-control" name="details" placeholder="yapılan işlem ile ilgili kısa bilgi"></textarea>
+                                    <textarea class="form-control" name="details" required="required" placeholder="yapılan işlem ile ilgili kısa bilgi"></textarea>
                                 </div>
                             </div>
 

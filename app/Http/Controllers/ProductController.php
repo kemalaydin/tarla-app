@@ -59,6 +59,7 @@ class ProductController extends Controller
             $NewWork->user_id = Auth::id();
             $NewWork->work_type = 3;
             $NewWork->details = "Ürün planlaması yapıldı.";
+            $NewWork->work_code = Str::random(5);
             $NewWork->save();
 
             Alert::toast('Ürün Başarıyla Ekildi','success');

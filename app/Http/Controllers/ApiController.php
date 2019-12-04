@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Model\User;
+use App\Model\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -22,7 +23,13 @@ class ApiController extends Controller
         }
     }
 
-    public function deneme(){
-        return User::all();
+    public function ProductDetail(){
+        $ProductCode = request('product_code');
+        $Product = Product::where('product_code',$ProductCode)->with('productType')->with('work.user','seed.supplier','fertilizer.supplier','plantation')->first();
+        if($Product){
+            return response()->json($Product,200);
+        }else{
+            return response()->json('Ürün Bulunamadı',404);
+        }
     }
 }

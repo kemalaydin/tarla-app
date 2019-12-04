@@ -5,5 +5,5 @@
 @stop
 
 @section('content')
-    Taşıyıcı üyelik
+    Planlama üyelik
 @stop

@@ -29,7 +29,7 @@
                 </div>
             </li>
         @endif
-
+        @if(Auth::user()->permission == "admin" or Auth::user()->permission == "satin_alma" or Auth::user()->permission == "planlama")
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
                 <i class="icofont-farmer" style="font-size: 19px;"></i>
@@ -43,7 +43,7 @@
 
             </div>
         </li>
-
+        @endif
         @if(Auth::user()->permission == "admin" || Auth::user()->permission == "satin_alma" )
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
@@ -58,8 +58,9 @@
         @endif
 
 
-    @if(Auth::user()->permission != "ciftci" || Auth::user()->permission != "kalite_kontrol" )
-            <li class="nav-item dropdown">
+        @if(Auth::user()->permission == "admin" or Auth::user()->permission == "satin_alma" or Auth::user()->permission == "planlama")
+
+        <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
                     <i class="icofont-wheat" style="font-size: 19px;"></i>
                     <span>Tohumlar</span>
@@ -76,8 +77,8 @@
             </li>
         @endif
 
-        @if(Auth::user()->permission != "ciftci" || Auth::user()->permission != "kalite_kontrol" )
-            <li class="nav-item dropdown">
+        @if(Auth::user()->permission == "admin" or Auth::user()->permission == "satin_alma" or Auth::user()->permission == "planlama")
+        <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
                     <i class="icofont-cement-mix" style="font-size: 19px;"></i>
                     <span>Gübreler</span>
@@ -95,7 +96,6 @@
         @endif
 
 
-        @if(Auth::user()->permission != "kalite_kontrol" )
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
                     <i class="icofont-fruits" style="font-size: 19px;"></i>
@@ -106,12 +106,8 @@
                     @if(Auth::user()->permission == "planlama" || Auth::user()->permission == "admin" )
                         <a class="dropdown-item " href="{{route('product.index')}}">Yeni Ürün Ekimi</a>
                     @endif
-                    @if(Auth::user()->permission == "kalite_kontrol" || Auth::user()->permission == "admin" )
-                        <a class="dropdown-item " href="{{route('product.create')}}">Ürün Kontrol</a>
-                    @endif
                 </div>
             </li>
-        @endif
 
 
 

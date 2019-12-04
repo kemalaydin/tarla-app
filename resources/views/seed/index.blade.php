@@ -15,7 +15,9 @@
                 <div class="card-header border-bottom">
                     <h6 class="m-0">
                         Kayıtlı Tohumlar
-                        <a href="{{ route('seed.create') }}" class="float-right btn btn-info">+ Yeni Tohum Ekle</a>
+                        @if(Auth::user()->permission == "admin" or Auth::user()->permission == "satin_alma" or Auth::user()->permission == "planlama")
+                            <a href="{{ route('seed.create') }}" class="float-right btn btn-info">+ Yeni Tohum Ekle</a>
+                        @endif
                     </h6>
 
                 </div>
@@ -63,6 +65,7 @@
                                     {{ $Seed->stock }}
                                 </td>
                                 <td style="width: 150px">
+                                    @if(Auth::user()->permission == "admin" or Auth::user()->permission == "satin_alma" or Auth::user()->permission == "planlama")
                                     <form action="{{ route('seed.destroy',$Seed->id) }}" method="post">
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
 
@@ -78,6 +81,9 @@
 
                                     </div>
                                     </form>
+                                    @else
+                                        -
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach

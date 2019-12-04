@@ -15,7 +15,9 @@
                 <div class="card-header border-bottom">
                     <h6 class="m-0">
                         Kayıtlı Tarlalar
-                        <a href="{{ route('plant.create') }}" class="float-right btn btn-info">+ Yeni Tarla Ekle</a>
+                        @if(Auth::user()->permission == "admin" or Auth::user()->permission == "satin_alma" or Auth::user()->permission == "planlama")
+                            <a href="{{ route('plant.create') }}" class="float-right btn btn-info">+ Yeni Tarla Ekle</a>
+                        @endif
                     </h6>
 
                 </div>
@@ -40,6 +42,7 @@
                                 <td>{{ $Plant->area }}<small>m<sup>2</sup></small></td>
                                 <td>{{ $Plant->created_at }}</td>
                                 <td style="width: 150px">
+                                    @if(Auth::user()->permission == "admin" or Auth::user()->permission == "satin_alma" or Auth::user()->permission == "planlama")
                                     <form action="{{ route('plant.destroy',$Plant->id) }}" method="post">
                                     <div class="btn-group btn-group-sm" role="group" aria-label="Table row actions">
 
@@ -54,6 +57,9 @@
 
                                     </div>
                                     </form>
+                                    @else
+                                        -
+                                    @endif
                                 </td>
                             </tr>
                         @endforeach
