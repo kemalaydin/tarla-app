@@ -62,7 +62,6 @@ class UserController extends Controller
             $User->$key = $value;
         }
         $User->password = Hash::make($request->get('password'));
-        $User->api_token = Str::random(60);
         $User->save();
         Alert::toast('Kullanıcı Başarıyla Eklendi','success');
         return redirect()->route('user.index');

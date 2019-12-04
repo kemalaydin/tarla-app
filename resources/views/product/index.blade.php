@@ -15,7 +15,7 @@
                 <div class="card-header border-bottom">
                     <h6 class="m-0">
                         Kayıtlı Ürünler
-                        @if(Auth::user()->permission == "admin")
+                        @if(Auth::user()->permission == "admin" or Auth::user()->permission == "planlama")
                             <a href="{{ route('product.create') }}" class="float-right btn btn-info">+ Yeni Ürün Ek</a>
                         @endif
                     </h6>

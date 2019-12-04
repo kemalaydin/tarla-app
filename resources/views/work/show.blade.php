@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sisteme yeni bir iş ekleyin
+    SİSTEME YENİ BİR İŞ EKLEYİN
 @stop
 
 @section('content')
@@ -32,8 +32,7 @@
                                 <div class="form-group">
                                     İşlem
                                     <select class="form-control" name="work_type" required>
-                                        <option disabled selected>Yapacağınız İşlemi Seçiniz...</option>
-                                        @if(Auth::user()->permission == "satin_alma" or Auth::user()->permission == "admin")<option value="1">Tohum Alma</option>@endif
+                                        <option @if(Auth::user()->permission == "satin_alma" or Auth::user()->permission == "admin") option value="1">Tohum Alma</option>@endif
                                         @if(Auth::user()->permission == "satin_alma" or Auth::user()->permission == "admin")<option value="2">Gübre Alma</option>@endif
                                         @if(Auth::user()->permission == "planlama" or Auth::user()->permission == "admin")<option value="3">Planlama ( Tarla, Gübre, Tohum )</option>@endif
                                         @if(Auth::user()->permission == "ciftci" or Auth::user()->permission == "admin")<option value="4">Ekim Yapma</option>@endif

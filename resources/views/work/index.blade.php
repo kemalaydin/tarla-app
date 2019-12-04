@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sistemeki ürünler üzerine yapılan işlemler.
+    SİSTEMDEKİ ÜRÜNLER ÜZERİNE YAPILAN İŞLEMLER
 @stop
 
 @section('content')

@@ -67,9 +67,6 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-small">
                     <a class="dropdown-item " href="{{route('seed.index')}}">Tohumlar</a>
-                    @if(Auth::user()->permission == "satin_alma" || Auth::user()->permission == "admin" )
-                        <a class="dropdown-item " href="{{route('seed.index')}}">Alınması Beklenen Tohumlar</a>
-                    @endif
                     @if(Auth::user()->permission == "satin_alma" || Auth::user()->permission == "admin" || Auth::user()->permission == "planlama" )
                         <a class="dropdown-item " href="{{route('seed.create')}}">Yeni Tohum Ekle</a>
                     @endif
@@ -85,9 +82,6 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-small">
                     <a class="dropdown-item " href="{{route('fertilizer.index')}}">Alınan Gübreler</a>
-                    @if(Auth::user()->permission == "satin_alma" || Auth::user()->permission == "admin" )
-                        <a class="dropdown-item " href="{{route('fertilizer.index')}}">Alınması Beklenen Gübreler</a>
-                    @endif
                     @if(Auth::user()->permission == "satin_alma" || Auth::user()->permission == "admin" || Auth::user()->permission == "planlama" )
                         <a class="dropdown-item " href="{{route('fertilizer.create')}}">Yeni Gübre Ekle</a>
                     @endif
@@ -104,7 +98,7 @@
                 <div class="dropdown-menu dropdown-menu-small">
                     <a class="dropdown-item " href="{{route('product.index')}}">Ekilen Ürünler</a>
                     @if(Auth::user()->permission == "planlama" || Auth::user()->permission == "admin" )
-                        <a class="dropdown-item " href="{{route('product.index')}}">Yeni Ürün Ekimi</a>
+                        <a class="dropdown-item " href="{{route('product.create')}}">Yeni Ürün Ekimi</a>
                     @endif
                 </div>
             </li>

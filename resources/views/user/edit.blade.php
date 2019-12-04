@@ -39,6 +39,7 @@
                                         <option @if($User->permission == "satin_alma") selected @endif value="satin_alma">Satın Alma</option>
                                         <option @if($User->permission == "planlama") selected @endif value="planlama">Planlama</option>
                                         <option @if($User->permission == "kalite_kontrol") selected @endif value="kalite_kontrol">Kalite Kontrol</option>
+                                        <option @if($User->permission == "tasiyici") selected @endif value="tasiyici">Taşıyıcı</option>
                                     </select>
                                 </div>
                             </div>

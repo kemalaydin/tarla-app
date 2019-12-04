@@ -38,6 +38,7 @@
                                         <option value="satin_alma">Satın Alma</option>
                                         <option value="planlama">Planlama</option>
                                         <option value="kalite_kontrol">Kalite Kontrol</option>
+                                        <option value="tasiyici">Taşıyıcı</option>
                                     </select>
                                 </div>
                             </div>
