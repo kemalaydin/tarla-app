@@ -12,10 +12,7 @@
                     <div class="d-flex flex-column m-auto">
                         <div class="stats-small__data text-center">
                             <span class="stats-small__label text-uppercase">Ürün</span>
-                            <h6 class="stats-small__value count my-3">2,390</h6>
-                        </div>
-                        <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
+                            <h6 class="stats-small__value count my-3">{{ App\Model\ProductType::count() }}</h6>
                         </div>
                     </div>
                     <canvas height="140" class="blog-overview-stats-small-1 chartjs-render-monitor" style="display: block; height: 70px; width: 177px;" width="354"></canvas>
@@ -40,10 +37,7 @@
                     <div class="d-flex flex-column m-auto">
                         <div class="stats-small__data text-center">
                             <span class="stats-small__label text-uppercase">Yapılan İşler</span>
-                            <h6 class="stats-small__value count my-3">8,147</h6>
-                        </div>
-                        <div class="stats-small__data">
-                            <span class="stats-small__percentage stats-small__percentage--decrease">3.8%</span>
+                            <h6 class="stats-small__value count my-3">{{ App\Model\Product::count() }}</h6>
                         </div>
                     </div>
                     <canvas height="140" class="blog-overview-stats-small-3 chartjs-render-monitor" style="display: block; height: 70px; width: 177px;" width="354"></canvas>
