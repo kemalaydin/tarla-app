@@ -77,7 +77,7 @@
                                         var optionSelected = $("option:selected", this);
                                         var valueSelected = this.value;
                                         // Make a request for a user with a given ID
-                                        axios.post('{{  url("getProductSeed") }}', {
+                                        axios.post('{{ URL("getProductSeed") }}', {
                                             params: {
                                                 productType: valueSelected,
                                                 _token: "{{ csrf_token() }}"
