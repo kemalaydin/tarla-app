@@ -23,17 +23,17 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="validationServer01" name="merchant_name" value="{{ $Supplier->merchant_name }}" required>
+                                    <input type="text" class="form-control" id="validationServer01" name="merchant_name" value="{{ $Supplier->merchant_name }}" placeholder="Tedarikçi Adı" required>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="validationServer01" name="phone" value="{{ $Supplier->phone }}" required>
+                                    <input type="text" class="form-control" id="validationServer01" name="phone" value="{{ $Supplier->phone }}" placeholder="Telefon Numarası" required>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea type="text" class="form-control" id="inputPassword4" name="address" placeholder="Adres">{{$Supplier->address}}</textarea>
+                                    <textarea type="text" class="form-control" id="inputPassword4" name="address" placeholder="Adres" required>{{$Supplier->address}}</textarea>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Düzenle" class="float-right btn btn-success" />

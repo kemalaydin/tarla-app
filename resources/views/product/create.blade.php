@@ -16,6 +16,15 @@
                     <h6 class="m-0">Yeni Ürün Ekleyin</h6>
                 </div>
                 <ul class="list-group list-group-flush">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <form action="{{ route('product.store') }}" method="post">
                         {{csrf_field()}}
                         <li class="list-group-item p-3">

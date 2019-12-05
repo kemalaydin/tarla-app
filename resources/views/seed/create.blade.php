@@ -16,6 +16,15 @@
                     <h6 class="m-0">Yeni Tohum Ekleyin</h6>
                 </div>
                 <ul class="list-group list-group-flush">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <form action="{{ route('seed.store') }}" method="post">
                     {{csrf_field()}}
                     <li class="list-group-item p-3">
@@ -44,6 +53,7 @@
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
                                     <select class="form-control" name="supply_status" required>
+                                        <option selected disabled>Tedarik Durumunu Seçiniz...</option>
                                         <option value="0">Tedarik Edilmedi</option>
                                         <option value="1">Tedarik Edildi</option>
 
@@ -52,12 +62,12 @@
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" name="stock" placeholder="Alınacak Adet" />
+                                    <input class="form-control" name="stock" placeholder="Alınacak Adet" required/>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" name="seed_name" placeholder="Tohum İsmi" />
+                                    <input class="form-control" name="seed_name" placeholder="Tohum İsmi" required />
                                 </div>
                             </div>
 

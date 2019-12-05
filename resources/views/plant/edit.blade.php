@@ -23,12 +23,12 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="validationServer01" name="garden_name" value="{{$Plant->garden_name}}" required>
+                                    <input type="text" class="form-control" id="validationServer01" name="garden_name" value="{{$Plant->garden_name}}" placeholder="Tarla Adı" required>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="inputPassword4" name="area" value="{{$Plant->area}}">
+                                    <input type="text" class="form-control" id="inputPassword4" name="area" value="{{$Plant->area}}" placeholder="Tarla Alanı ( M2 )" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Düzenle" class="float-right btn btn-success" />

@@ -7,6 +7,7 @@ use App\Model\ProductType;
 use App\Model\Seed;
 use App\Model\Supplier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class FertilizerController extends Controller
@@ -42,6 +43,16 @@ class FertilizerController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = Validator::make($request->all(),[
+            'supplier_id' => 'required',
+            'supply_status' => 'required'
+        ]);
+        if($validatedData->fails()) {
+            return redirect()->back()
+                ->withErrors($validatedData)
+                ->withInput();
+        }
+
         $NewFertilizer = Fertilizer::create($request->except('_token'));
         if($NewFertilizer){
             Alert::toast('Gübre başarıyla eklendi','success');

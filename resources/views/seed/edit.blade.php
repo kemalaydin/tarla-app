@@ -51,13 +51,13 @@
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input class="form-control" name="stock" value="{{ $Seed->stock }}" />
+                                    <input class="form-control" name="stock" value="{{ $Seed->stock }}" placeholder="Alınacak Adet" required />
                                 </div>
 
                             </div>
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="seed_name" value="{{ $Seed->seed_name }}" placeholder="Tohum İsmi" />
+                                        <input class="form-control" name="seed_name" value="{{ $Seed->seed_name }}" placeholder="Tohum İsmi" required />
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" value="Düzenle" class="float-right btn btn-success" />
