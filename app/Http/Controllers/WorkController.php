@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
+use function GuzzleHttp\Promise\queue;
 
 class WorkController extends Controller
 {
@@ -42,6 +43,42 @@ class WorkController extends Controller
     public function store(Request $request)
     {
         $work_code = Str::random(5);
+
+        $WorkFinished = Work::where('work_type','tasima')->where('product_id',$request->get('product_id'))->count();
+
+        if($WorkFinished > 0){
+            Alert::toast('Ürün Teslim Edilmiştir, İşlem Yapılamaz','error');
+            return redirect()->back();
+        }
+
+        if($request->get('work_type') == "4"){
+            $WorkControl = Work::where('work_type','ekme')->where('product_id',$request->get('product_id'))->count();
+            if($WorkControl > 0){
+                Alert::toast('Bu ürün için ekme işlemi yapıldı','warning');
+                return redirect()->back();
+
+            }
+        }
+
+        if($request->get('work_type') == "6"){
+            $WorkControl = Work::where('work_type','toplama')->where('product_id',$request->get('product_id'))->count();
+            if($WorkControl > 0){
+                Alert::toast('Bu ürün için toplama işlemi yapıldı','warning');
+                return redirect()->back();
+
+            }
+        }
+
+        if($request->get('work_type') == "8"){
+            $WorkControl = Work::where('work_type','kalite_kontrol')->where('product_id',$request->get('product_id'))->count();
+            if($WorkControl > 0){
+                Alert::toast('Bu ürün için kalite kontrol işlemi yapıldı','warning');
+                return redirect()->back();
+
+            }
+        }
+
+
         if($request->get('work_type') == "5"){
             $WorkControl = Work::where('work_type',"ekme")->where('product_id',$request->get('product_id'))->count();
             if($WorkControl < 1){

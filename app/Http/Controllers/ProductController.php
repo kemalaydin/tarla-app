@@ -124,7 +124,9 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        $Product = Product::findOrFail($id)->delete();
+        $Product = Product::findOrFail($id);
+        $Product->work()->delete();
+        $Product->delete();
         Alert::toast('Başarıyla Silindi','warning');
         return redirect()->back();
     }
