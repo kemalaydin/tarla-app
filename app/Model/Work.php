@@ -10,10 +10,10 @@ class Work extends Model
     use SoftDeletes;
     protected $fillable = ["user_id","product_id","work_type","details","work_code"];
     public function user(){
-        return $this->hasOne('App\Model\User','id','user_id');
+        return $this->hasOne('App\Model\User','id','user_id')->withTrashed();
     }
 
     public function product(){
-        return $this->hasOne('App\Model\Product','id','product_id');
+        return $this->hasOne('App\Model\Product','id','product_id')->withTrashed();
     }
 }
