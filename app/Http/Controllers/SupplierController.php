@@ -71,7 +71,7 @@ class SupplierController extends Controller
     {
         $Supplier = Supplier::findOrFail($id)->update($request->except('_token','_method'));
         if($Supplier){
-            Alert::toast('Tedarikçi G.üncellendi','success');
+            Alert::toast('Tedarikçi Güncellendi','success');
             return redirect()->route('supplier.edit',$id);
         }else{
             Alert::toast('Bir hata meydana geldi','danger');

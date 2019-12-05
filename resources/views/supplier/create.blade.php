@@ -32,7 +32,7 @@
                             </div>
                             <div class="col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <textarea type="text" class="form-control" id="inputPassword4" name="address" placeholder="Adres"></textarea>
+                                    <textarea type="text" class="form-control" id="inputPassword4" name="address" placeholder="Adres" required></textarea>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Kaydet" class="float-right btn btn-success" />

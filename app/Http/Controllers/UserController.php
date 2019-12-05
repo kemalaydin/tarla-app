@@ -48,15 +48,14 @@ class UserController extends Controller
         $validatedData = Validator::make($request->all(),[
             'email' => 'required|unique:users|max:255',
             'name' => 'required',
-            'password' => 'required'
+            'password' => 'required',
+            'permission' => 'required'
         ]);
-
-        if($validatedData->fails()){
-            return redirect()->back()
-                ->withErrors($validatedData)
-                ->withInput();
-        }
-
+         if($validatedData->fails()) {
+             return redirect()->back()
+         ->withErrors($validatedData)
+         ->withInput();
+           }
         $User = new User();
         foreach($request->except('_token','password') as $key => $value){
             $User->$key = $value;
