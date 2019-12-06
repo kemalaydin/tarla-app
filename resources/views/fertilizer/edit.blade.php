@@ -23,7 +23,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                        <input class="form-control" name="stock" value="{{ $Fertilizer->fertilizer_name }}" />
+                                        <input class="form-control" name="stock" value="{{ $Fertilizer->fertilizer_name }}" placeholder="Gübre Adı" required />
 
                                 </div>
                             </div>

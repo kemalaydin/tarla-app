@@ -27,7 +27,7 @@
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="inputPassword4" name="area" placeholder="Tarla Alanı ( M2 )">
+                                    <input type="text" class="form-control" id="inputPassword4" name="area" placeholder="Tarla Alanı ( M2 )" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Kaydet" class="float-right btn btn-success" />

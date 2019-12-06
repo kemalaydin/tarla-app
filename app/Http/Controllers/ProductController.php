@@ -12,6 +12,7 @@ use App\Model\Work;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -51,6 +52,18 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = Validator::make($request->all(),[
+            'product_type' => 'required',
+            'plantation_id' => 'required',
+            'fertilizer_id' => 'required',
+            'seed_id' => 'required'
+        ]);
+        if($validatedData->fails()) {
+            return redirect()->back()
+                ->withErrors($validatedData)
+                ->withInput();
+        }
+
         $Product = Product::create($request->except('_token'));
 
         if($Product){

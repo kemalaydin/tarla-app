@@ -45,7 +45,7 @@
                             </div>
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="inputPassword4" value="{{ $User->email }}" name="email" placeholder="Eposta adresi">
+                                    <input type="text" class="form-control" id="inputPassword4" value="{{ $User->email }}" name="email" placeholder="Eposta adresi" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="Boş bırakılırsa değiştirilmez.">

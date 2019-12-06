@@ -23,7 +23,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="validationServer01"  name="product_name" value="{{ $ProductType->product_name }}" required>
+                                    <input type="text" class="form-control" id="validationServer01"  name="product_name" value="{{ $ProductType->product_name }}" placeholder="Ürün Adı" required>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6">
@@ -36,7 +36,7 @@
                             </div>
                             <div class="col-sm-12 col-md-12">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="validationServer01" name="growth_time" value="{{ $ProductType->growth_time }}" required>
+                                    <input type="text" class="form-control" id="validationServer01" name="growth_time" value="{{ $ProductType->growth_time }}" placeholder="Yetişme Süresi ( Gün )" required>
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Düzenle" class="float-right btn btn-success" />

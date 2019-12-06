@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Model\Product;
 use App\Model\ProductType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductTypeController extends Controller
@@ -38,6 +39,15 @@ class ProductTypeController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = Validator::make($request->all(),[
+            'product_type' => 'required'
+        ]);
+        if($validatedData->fails()) {
+            return redirect()->back()
+                ->withErrors($validatedData)
+                ->withInput();
+        }
+
         $NewProductType = ProductType::create($request->except('_token'));
         if($NewProductType){
             Alert::toast('Ürün Tipi Başarıyla Eklendi','success');
