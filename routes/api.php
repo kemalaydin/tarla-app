@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::get('kemal/{id}','ApiController@ProductDetail');
+Route::post('login', 'ApiController@login');
+Route::group(['middleware' => ['auth:api','isAdmin']], function () {
+    Route::post('product_search', 'ApiController@ProductDetail');
 });

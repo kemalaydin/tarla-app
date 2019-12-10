@@ -1,16 +1,19 @@
 <?php
 
-namespace App;
+namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Work extends Model
 {
+    use SoftDeletes;
+    protected $fillable = ["user_id","product_id","work_type","details","work_code"];
     public function user(){
-        return $this->belongsTo('App\Model\User','id');
+        return $this->hasOne('App\Model\User','id','user_id')->withTrashed();
     }
 
     public function product(){
-        return $this->belongsTo('App\Model\Product','id');
+        return $this->hasOne('App\Model\Product','id','product_id')->withTrashed();
     }
 }

@@ -61,6 +61,11 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'isAdmin' => \App\Http\Middleware\AdminPermission::class,
+        'isCiftci' => \App\Http\Middleware\CiftciPermission::class,
+        'isKaliteKontrol' => \App\Http\Middleware\KaliteKontrolPermission::class,
+        'isPlanlama' => \App\Http\Middleware\PlanlamaPermission::class,
+        'isSatinAlma' => \App\Http\Middleware\SatinAlmaPermission::class,
     ];
 
     /**
