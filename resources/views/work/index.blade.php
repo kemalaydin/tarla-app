@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    <i class="icofont-farmer" style="font-size: 29px;"></i> İşler
+    <i class="icofont-gear-alt" style="font-size: 29px;"></i> İşler
 @stop
 
 @section('description')

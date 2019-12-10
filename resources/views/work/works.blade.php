@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    <i class="icofont-farmer" style="font-size: 29px;"></i> {{ $Product->product_code }} Kodlu ürün için yapılan işler
+    <i class="icofont-gear-alt" style="font-size: 29px;"></i> {{ $Product->product_code }} Kodlu ürün için yapılan işler
 @stop
 
 @section('description')

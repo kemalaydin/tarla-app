@@ -85,7 +85,7 @@ class FertilizerController extends Controller
     {
         $Suppliers = Supplier::get();
         $Fertilizer = Fertilizer::findOrFail($id);
-        return view('Fertilizer.edit',compact('Fertilizer','Suppliers'));
+        return view('fertilizer.edit',compact('Fertilizer','Suppliers'));
     }
 
     /**

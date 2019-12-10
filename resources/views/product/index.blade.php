@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    <i class="icofont-farmer" style="font-size: 29px;"></i> Ürünler
+    <i class="icofont-fruits" style="font-size: 29px;"></i> Ürünler
 @stop
 
 @section('description')

@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    <i class="icofont-delivery-time" style="font-size: 29px;"></i> Yeni Ürün Tipi Ekle
+    <i class="icofont-strawberry" style="font-size: 29px;"></i> Yeni Ürün Tipi Ekle
 @stop
 
 @section('description')

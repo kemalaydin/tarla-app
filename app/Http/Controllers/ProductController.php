@@ -105,8 +105,8 @@ class ProductController extends Controller
         $ProductTypes = ProductType::get();
         $Plants = Plantation::get();
         $Fertilizers = Fertilizer::get();
-        $Seeds = Seed::get();
         $Product = Product::findorfail($id);
+        $Seeds = Seed::where('product_type',$Product->product_type)->get();
         return view('product.edit',compact('Plants','Fertilizers','Seeds','ProductTypes','Product'));
 
     }

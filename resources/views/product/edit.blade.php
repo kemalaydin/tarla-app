@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    <i class="icofont-delivery-time" style="font-size: 29px;"></i> EKİLEN ÜRÜNÜ DÜZENLE
+    <i class="icofont-fruits" style="font-size: 29px;"></i> EKİLEN ÜRÜNÜ DÜZENLE
 @stop
 
 @section('description')
@@ -51,7 +51,7 @@
                                         <select class="form-control" name="fertilizer_id" required>
                                             <option disabled selected>Gübre Seçiniz...</option>
                                             @foreach($Fertilizers as $Fertilizer)
-                                                <option value="{{ $Fertilizer->id }}" @if($Product->fertilizer_id == $Fertilizer->id) selected @endif >{{$Fertilizer->fertilizer_name}} ( Stok Durumu : @if($Fertilizer->supply_status == 0) Yok @else (Var) @endif - {{ $Fertilizer->supplier->merchant_name }}</option>
+                                                <option value="{{ $Fertilizer->id }}" @if($Product->fertilizer_id == $Fertilizer->id) selected @endif >{{$Fertilizer->fertilizer_name}} ( Stok Durumu : @if($Fertilizer->supply_status == 0) Yok @else Var @endif ) - {{ $Fertilizer->supplier->merchant_name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -62,7 +62,7 @@
                                         Kullanılacak Tohum
                                         <select class="form-control" name="seed_id" id="seed" required>
                                             @foreach($Seeds as $Seed)
-                                            <option disabled selected value="{{$Seed->id}}" @if ($Product->seed_id == $Seed->id) selected @endif> {{$Seed->seed_name}} </option>
+                                                <option value="{{$Seed->id}}" @if ($Product->seed_id == $Seed->id) selected @endif> {{$Seed->seed_name}} </option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -89,14 +89,14 @@
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-group">
                                         Ekim Tarihi
-                                        <input type="date" class="form-control" name="planting_date" placeholder="Ekim Tarihi" required />
+                                        <input type="date" class="form-control" name="planting_date" placeholder="Ekim Tarihi" value="{{ $Product->planting_date }}"  required />
                                     </div>
                                 </div>
 
                                 <div class="col-sm-12 col-md-6">
                                     <div class="form-group">
                                         Hasat Tarihi
-                                        <input type="date" class="form-control" name="crop_collecting_date" required />
+                                        <input type="date" class="form-control" name="crop_collecting_date" value="{{ $Product->crop_collecting_date }}" required />
 
                                     </div>
                                 </div>
@@ -105,6 +105,12 @@
                                         <input type="submit" value="Düzenle" class="float-right btn btn-success" />
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    {!! QrCode::size(100)->generate($Product->product_code); !!}
+                                </div>
+
                             </div>
                         </li>
                     </form>

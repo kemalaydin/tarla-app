@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    <i class="icofont-delivery-time" style="font-size: 29px;"></i> Gübre Düzenle
+    <i class="icofont-cement-mix" style="font-size: 29px;"></i> Gübre Düzenle
 @stop
 
 @section('description')

@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('title')
-    <i class="icofont-delivery-time" style="font-size: 29px;"></i> Yeni Tohum Ekle
+    <i class="icofont-wheat" style="font-size: 29px;"></i> Yeni Tohum Ekle
 @stop
 
 @section('description')
