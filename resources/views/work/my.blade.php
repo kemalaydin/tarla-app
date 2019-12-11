@@ -5,7 +5,7 @@
 @stop
 
 @section('description')
-    Sistemdeki yaptığınız işler
+    SİSTEMDEKİ YAPTIĞINIZ İŞLER
 @stop
 
 @section('content')
